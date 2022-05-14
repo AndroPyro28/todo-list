@@ -5,6 +5,8 @@ function AddTask({ textHeader, appendCompletedItem, completeItems }) {
     const [addtask, setTask] = useState('');
 
     const handleAddTask = () => {
+
+        if (!addtask) return alert("Write a task to add in the tasks")
         setTasks([...tasks, addtask])
         setTask('');
     }
